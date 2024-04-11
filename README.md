@@ -80,3 +80,8 @@ def kernel_mask(params):
     
 tx = sophia(schedule, weight_decay=0.01, mask=kernel_mask)
 ```
+
+### Source links
+
+- https://github.com/stanford-crfm/levanter
+- https://gist.github.com/ameya98/7f103501714f4d2fdc0cb793579648d9
