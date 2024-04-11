@@ -77,7 +77,8 @@ def kernel_mask(params):
     all_false = jax.tree_util.tree_map(lambda _: False, params)
     return kernels.update(lambda _: True, all_false)
 
-    
+
+# weight decay only applied to kernel weights
 tx = sophia(schedule, weight_decay=0.01, mask=kernel_mask)
 ```
 
