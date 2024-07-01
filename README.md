@@ -13,7 +13,7 @@ Params should be used for training, but opt_state.x should be used for evaluatio
 ### To use:
 
 vanilla sophia:
-```
+```py
 warmup_fn = optax.linear_schedule(
     init_value=min_learning_rate,
     end_value=learning_rate,
@@ -42,7 +42,7 @@ eval_params = opt_state.x
 ```
 
 schedule free sophia:
-```
+```py
 # schedule free uses flat learning rate with warmup
 
 warmup_fn = optax.linear_schedule(
@@ -69,7 +69,7 @@ eval_params = opt_state.x
 ```
 
 an example of the weight decay mask:
-```
+```py
 kernels = flax.traverse_util.ModelParamTraversal(lambda p, _: "kernel" in p)
 
 
